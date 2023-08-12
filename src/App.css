@@ -5,8 +5,10 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
 }
+
+
+/* navbar */
 
 nav{
   position: relative;
@@ -68,6 +70,10 @@ button{
   font-weight: bold;
 }
 
+
+
+/* mainpage */
+
 main{
   display: grid;
   grid-template-columns: 60% 40%;
@@ -85,7 +91,6 @@ main{
 .main_box{
   height: 85%;
   color: white;
-  /* border: 3px solid white; */
 }
 
 .main_left_content{
@@ -103,7 +108,6 @@ main{
   font-size: 44px;
   margin-bottom: 20px;
   font-weight: 400;
-  /* border: 2px solid white; */
 }
 
 h1> p{
@@ -125,7 +129,6 @@ h1 > p:nth-child(2) {
 }
 
 .service{
-  /* border: 3px solid white; */
   display: grid;
   grid-template-columns: 15% 85%;
   margin: 30px 0;
@@ -145,17 +148,19 @@ h1 > p:nth-child(2) {
   color: rgb(0, 150, 255);
 }
 
+
+
+/* payment section */
+
 .topp{
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 20px 0;
-  /* border: 2px solid black; */
 }
 
 .topp > div {
   display: grid;
   place-items: center;
-  /* border: 2px solid black; */
 }
 
 .topnum{
@@ -188,9 +193,6 @@ h1 > p:nth-child(2) {
   border-radius: 5px;
   place-items: center;
   cursor: pointer;
-}
-
-.subs > input{
 }
 
 .duration{
@@ -302,7 +304,6 @@ hr{
 
 .discount{
   position: relative;
-  /* height: 40px; */
   margin: 10px 15px;
   border-radius: 5px ;
   border: 2px solid rgb(220, 60, 60);
@@ -310,27 +311,22 @@ hr{
 }
 
 .discount_box1{
-  margin: 10px 13px 0 ; 
-  /* border: 2px solid rgb(160, 160, 160); */
+  margin: 10px 13px 0; 
 }
 
 .discount_box1 > div:nth-child(1){
   color: rgb(220, 60, 60);
-  font-weight: 700;
 }
 
 .discount_validity{
   display: grid;
   grid-template-columns: 10% 90%;
-  /* border: 2px solid black; */
   margin: 0 5px 10px;
   place-items: center;
 }
 
 .discount_validity > img{
   height: 15px;
-  /* border: 2px solid black; */
-  
 }
 
 .discount_validity > div{
@@ -355,7 +351,6 @@ hr{
 .pay_btn{
   position: relative;
   height: 40px;
-  /* border: 2px solid black; */
   margin: 20px 15px;
 }
 
@@ -392,11 +387,7 @@ hr{
 
 
 
-
-
-
-
-
+/* media querry */
 
 @media screen and (max-width: 990px) {
   
