@@ -94,13 +94,13 @@ function Payment() {
 
             <div className="total_fee">
                 <div className="total_fee_content">Subscription Fee</div>
-                <div className="total_fee_amount">₹18,500</div>
+                <div className="total_fee_amount">₹{finalCost + 18401}</div>
             </div>
 
             <div className="discount">
                 <div className="total_fee discount_box1">
                     <div className="total_fee_content">Limited time offer</div>
-                    <div className="total_fee_amount">- ₹18,401</div>
+                    <div className="total_fee_amount">- ₹18401</div>
                 </div>
                 <div className="discount_validity">
                     <img src={clock} alt="this" />
