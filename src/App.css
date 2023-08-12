@@ -1,38 +1,447 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav{
+  position: relative;
+  width: 100%;
+  height: 55px;
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navitem{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navitem > span{
+  font-size: 13px;
+}
+
+.navitem .navitem_arrow{
+  position: relative;
+  top: 2px;
+  font-size: 16px;
+}
+
+.logo{
+  height: 27px;
+  left: 6%; 
+}
+
+.course{
+  left: 18%;
+}
+
+.program{
+  left: 26%;  
+}
+
+.search{
+  left: 75%;
+}
+
+.login{
+  background-color: transparent;
+  border: none;
+  left: 80%;
+}
+
+button{
+  cursor: pointer;
+}
+
+.joinnow{
+  background: linear-gradient(to right, rgb(0, 145, 255), rgb(1, 72, 255));
+  color: white;
+  border: none;
+  left: 85%;
+  padding: 10px 30px;
+  border-radius: 40px;
+  font-weight: bold;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  height: calc(100vh - 55px);
+  background: url("assets/bgimg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box{
+  display: grid;
+  place-items: center;
+}
+
+.main_box{
+  height: 85%;
+  color: white;
+  /* border: 3px solid white; */
+}
+
+.main_left_content{
+  padding: 0 20px;
+  width: 80%;
+}
+
+.main_right_content{
+  width: 70%;
+  color: black;
+  background-color: white;
+}
+
+.main_left_content > h1{
+  font-size: 44px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  /* border: 2px solid white; */
+}
+
+h1> p{
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+del{
+  color: red;
+}
+
+del > span{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 > p:nth-child(2) {
+  color: rgb(0, 150, 255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.service{
+  /* border: 3px solid white; */
+  display: grid;
+  grid-template-columns: 15% 85%;
+  margin: 30px 0;
+}
+
+.service_icon{
+  height: 50px;
+}
+
+.service_content{
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.service_content > span{
+  font-weight: 600;
+  color: rgb(0, 150, 255);
+}
+
+.topp{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 20px 0;
+  /* border: 2px solid black; */
+}
+
+.topp > div {
+  display: grid;
+  place-items: center;
+  /* border: 2px solid black; */
+}
+
+.topnum{
+  border-radius: 100%;
+  padding: 5px 12px;
+  color: white;
+  font-weight: 700;
+  background-color: rgb(0, 150, 255);
+}
+
+.topp > div > div:nth-child(2){
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(105, 104, 104);
+}
+
+.select_subs{
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.subs{
+  display: grid;
+  grid-template-columns: 10% 70% 20%;
+  border: 2px solid rgb(160, 160, 160);
+  margin: 10px 15px;
+  height: 50px;
+  border-radius: 5px;
+  place-items: center;
+  cursor: pointer;
+}
+
+.subs > input{
+}
+
+.duration{
+  width: 100%;
+  font-size: 12px;
+  font-weight: 700;
+  place-items: start;
+  color: rgb(89, 89, 89);
+}
+
+.price{
+  display: grid;
+}
+
+.price > div{
+  font-size: 10px;
+  text-align: center;
+}
+
+.total{
+  color: rgb(116, 116, 116);
+  font-weight: bold;
+}
+
+.total > span{
+  color: rgb(62, 62, 62);
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 3px;
+}
+
+.monthly{
+  color: rgb(181, 181, 181);
+}
+
+.monthly > span{
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(60, 60, 60);
+}
+
+.expired{
+  position: relative;
+  opacity: 0.5;
+  background-color: rgba(165, 165, 165, 0.534);
+  cursor: not-allowed;
+}
+
+.expired::after{
+  content: 'Offer Expired';
+  font-size: 10px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  color: white;
+  font-weight: 500;
+  padding: 0px 20px;
+  background-color: red;
+  margin-left: 10%;
+  border-radius: 0 0 4px 4px;
+}
+
+.offer{
+  opacity: 1;
+  background-color: white;
+  cursor: pointer;
+}
+
+.offer::after{
+  content: 'Recommended';
+  background-color: #47ba68;
+}
+
+.active_subs{
+  background-color: #aff2c2;
+  border-color: #29c956;
+}
+
+hr{
+  margin: 20px 15px 0;
+  height: 2px; 
+  background-color: rgb(142, 142, 142);
+}
+
+.total_fee{
+  position: relative;
+  height: 20px;
+  margin: 10px 30px;
+}
+
+.total_fee > div{
+  position: absolute;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(104, 104, 104);
+}
+
+.total_fee > div:nth-child(1){
+  left: 0;
+}
+
+.total_fee > div:nth-child(2){
+  right: 0;
+  font-weight: 700;
+}
+
+.discount{
+  position: relative;
+  /* height: 40px; */
+  margin: 10px 15px;
+  border-radius: 5px ;
+  border: 2px solid rgb(220, 60, 60);
+  background-color: rgb(249, 211, 211);
+}
+
+.discount_box1{
+  margin: 10px 13px 0 ; 
+  /* border: 2px solid rgb(160, 160, 160); */
+}
+
+.discount_box1 > div:nth-child(1){
+  color: rgb(220, 60, 60);
+  font-weight: 700;
+}
+
+.discount_validity{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  /* border: 2px solid black; */
+  margin: 0 5px 10px;
+  place-items: center;
+}
+
+.discount_validity > img{
+  height: 15px;
+  /* border: 2px solid black; */
+  
+}
+
+.discount_validity > div{
+  width: 100%;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgb(251, 102, 102);
+}
+
+.final_content{
+  padding-top: 5px;
+}
+
+.final_content > span{
+  font-weight: 700;
+}
+
+.final_price > span{
+  font-size: 18px;
+}
+
+.pay_btn{
+  position: relative;
+  height: 40px;
+  /* border: 2px solid black; */
+  margin: 20px 15px;
+}
+
+.pay_btn > button{
+  position: absolute;
+  width: 48%;
+  height: 40px;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.btn1{
+  left: 0;
+  color: rgb(255, 98, 98);
+  border: 2px solid rgb(247, 97, 97);
+}
+
+.btn2{
+  right: 0;
+  background-color: #47ba68;
+  color: white;
+  border: none;
+}
+
+.razorpay{
+  width: 90px;
+  margin: 0px 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 990px) {
+  
+  .course, .program, .login{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .joinnow{
+    left: 80%;
   }
+  
+  main{
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    height: 100%;
+  }
+
+  .box{
+    padding: 50px 0px ;
+  }
+  
+  .main_right_content{
+    height: 100%;
+    margin: 20px 0;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  .joinnow{
+    left: 65%;
+  }
+
+  .search{
+    left: 58%;
+  }
+
+  .main_left_content{
+    width: 100%;
+  }
+
+  .main_right_content{
+    width: 90%;
+    color: black;
+    background-color: white;
+  }
+
 }
